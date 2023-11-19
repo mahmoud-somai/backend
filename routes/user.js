@@ -1,7 +1,7 @@
 const router = require("express").Router()
 router.get("/Listusers",async(req,res)=>{
     try { 
-        res.status(200).send(Users)
+        res.json(Users)
     } catch (error) {
         console.log(error);
     }
