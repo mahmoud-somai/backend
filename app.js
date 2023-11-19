@@ -1,23 +1,30 @@
 const express=require('express');
-const userRoute=require("./routes/user.js")
+const appointmentRoute=require("./routes/appointment.js")
 const mongoose=require("mongoose")
 const app=express();
+const dotenv=require("dotenv")
+const cors = require("cors");
+app.use(cors());
+
+dotenv.config()
 
 
+app.use(express.json())
 
 
 
 //app.use(express.json())
 
+const connect = async()=>{
+    await mongoose.connect(process.env.db);
+    console.log("Connected with database !!! ")
+};
 
 
 
-mongoose.connect('mongodb+srv://mahmoud:mahmoud147@cluster0.vt4atwo.mongodb.net/project?retryWrites=true&w=majority',
-{userNewUrlParser:true},
-()=>console.log('connected with DB'));
 
 
-app.use("/api",userRoute)
+app.use("/api",appointmentRoute)
 
 
 app.get('/',(req,res)=>{
@@ -35,5 +42,6 @@ app.get('/test',(req,res)=>{
 
 
 app.listen(3000,()=>{
+    connect()
     console.log("connected with succes to backend")
 })
