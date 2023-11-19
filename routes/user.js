@@ -1,11 +1,15 @@
+const User = require("../models/User");
 const router = require("express").Router()
 router.get("/Listusers",async(req,res)=>{
-    try { 
+    try {
+        const Users=await User.find();
+        res.status(200).send(Users)
         res.json(Users)
     } catch (error) {
         console.log(error);
     }
 })
+
 
 
 
