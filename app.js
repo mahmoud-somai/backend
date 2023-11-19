@@ -8,10 +8,7 @@ app.use(cors());
 
 dotenv.config()
 
-
 app.use(express.json())
-
-
 
 //app.use(express.json())
 
@@ -21,14 +18,11 @@ const connect = async()=>{
 };
 
 
-
-
-
 app.use("/api",appointmentRoute)
 
 
 app.get('/',(req,res)=>{
-    res.json('Another Update  ');
+    res.json('Update Repo ');
 }
 );
 
