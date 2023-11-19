@@ -28,7 +28,7 @@ app.use("/api",appointmentRoute)
 
 
 app.get('/',(req,res)=>{
-    res.json('Another Update  ');
+    res.json('Update for VScode ');
 }
 );
 
