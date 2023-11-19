@@ -5,7 +5,7 @@ app.get('/',(req,res)=>{
     res.json('Another Update By Me ');
 }
 );
-app.get('/end',(req,res)=>{
+app.get('/api',(req,res)=>{
     res.json('test this end Point');
 });
 
