@@ -10,7 +10,7 @@ app.get('/api',(req,res)=>{
 });
 
 app.get('/test',(req,res)=>{
-    res.json('test VScode end Point');
+    res.json('VScode endPoint');
 });
 
 
