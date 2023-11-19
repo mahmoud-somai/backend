@@ -21,7 +21,7 @@ app.use("/api",userRoute)
 
 
 app.get('/',(req,res)=>{
-    res.json('Another Update By Me ');
+    res.json('Another Update  ');
 }
 );
 
