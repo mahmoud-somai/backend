@@ -7,8 +7,11 @@ app.get('/',(req,res)=>{
 );
 app.get('/api',(req,res)=>{
     res.json('test this end Point');
-}
-);
+});
+
+app.get('/test',(req,res)=>{
+    res.json('test VScode end Point');
+});
 
 
 app.listen(3000,()=>{
