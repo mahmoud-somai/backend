@@ -22,7 +22,7 @@ app.use("/api",appointmentRoute)
 
 
 app.get('/',(req,res)=>{
-    res.json('Update Repository');
+    res.json('Update Code');
 }
 );
 
