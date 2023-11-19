@@ -26,9 +26,7 @@ app.get('/',(req,res)=>{
     res.json('Another Update By Me ');
 }
 );
-app.get('/api',(req,res)=>{
-    res.json('test this end Point');
-});
+
 
 app.get('/test',(req,res)=>{
     res.json('VScode endPoint By Me');
