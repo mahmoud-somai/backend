@@ -9,7 +9,7 @@ app.get('/api',(req,res)=>{
     res.json('test this end Point');
 });
 
-app.get('/vs',(req,res)=>{
+app.get('/test',(req,res)=>{
     res.json('VScode endPoint By Me');
 });
 
