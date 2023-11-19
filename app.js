@@ -2,7 +2,7 @@ const express=require('express');
 const app=express();
 
 app.get('/',(req,res)=>{
-    res.json('Another Update Backend ');
+    res.json('Another Update  ');
 }
 );
 app.get('/api',(req,res)=>{
