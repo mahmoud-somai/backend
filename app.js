@@ -27,7 +27,7 @@ const connect = async()=>{
 app.use("/api",appointmentRoute)
 
 
-app.get('/',(req,res)=>{
+app.get('/vs',(req,res)=>{
     res.json('Update for VScode ');
 }
 );
