@@ -21,19 +21,19 @@ const connect = async()=>{
 app.use("/api",appointmentRoute)
 
 
-<<<<<<< HEAD
+
 app.get('/vs',(req,res)=>{
     res.json('Updated VS ');
-=======
-app.get('/',(req,res)=>{
-    res.json('Update Code');
->>>>>>> e26c182756677c833ecdfed0739221883e0f8c81
-}
-);
+});
+
 
 
 app.get('/test',(req,res)=>{
     res.json('VScode endPoint');
+});
+
+app.get('/',(req,res)=>{
+    res.json('Start endPoint');
 });
 
 
