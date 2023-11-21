@@ -23,7 +23,7 @@ app.use("/api",appointmentRoute)
 
 <<<<<<< HEAD
 app.get('/vs',(req,res)=>{
-    res.json('Update for VScode ');
+    res.json('Updated VS ');
 =======
 app.get('/',(req,res)=>{
     res.json('Update Code');
