@@ -28,7 +28,7 @@ app.get('/vs',(req,res)=>{
 
 
 app.get('/test',(req,res)=>{
-    res.json('Test EndPoint');
+    res.json('Test EP');
 });
 
 app.get('/',(req,res)=>{
