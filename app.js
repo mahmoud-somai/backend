@@ -21,7 +21,7 @@ const connect = async()=>{
 app.use("/api",appointmentRoute)
 
 app.get('/vs',(req,res)=>{
-    res.json('VS Endpoint');
+    res.json('VS EP');
 });
 
 
