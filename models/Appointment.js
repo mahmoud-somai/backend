@@ -8,12 +8,23 @@ const AppointmentSchema=new mongoose.Schema({
         type:String,
     },
     DateApp:{
-        type:String,
-       
+        type:String,  
     },
     TimeApp:{
         type:String,
-    }
+    },
+    idDoctor:{
+        type:String,
+    },
+    idUser:{
+        type:String,
+    },
+    pending:{
+        type:Boolean,
+    },
+    status:{
+        type:Boolean,
+    },
 })
 
 module.exports=mongoose.model("Appointment",AppointmentSchema)
