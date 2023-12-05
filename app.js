@@ -31,7 +31,6 @@ app.use("/api/posts",postRoute)
 app.use("/api",doctorRoute)
 app.use("/api",userRoute)
 app.use("/api",appointmentRoute)
-
 app.use("/api",notifRoute)
 
 
