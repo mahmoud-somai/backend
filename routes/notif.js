@@ -29,6 +29,30 @@ router.patch("/Notif/:id",async(req,res)=>{
     }
 })
 
+router.patch("/Notif", async (req, res) => {
+    try {
+      // Find all notifications
+      const allNotifications = await Notif.find();
+      
+      // Filter the notifications where Status is false
+      const notificationsToUpdate = allNotifications.filter(notification => !notification.Status);
+      
+      // Update the Status to true for the filtered notifications
+      const updatePromises = notificationsToUpdate.map(notification => {
+        return Notif.findByIdAndUpdate(notification._id, { Status: true });
+      });
+  
+      // Execute all update operations
+      await Promise.all(updatePromises);
+  
+      res.status(200).json({ message: 'Notifications updated successfully' });
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ error: 'Internal server error' });
+    }
+  });
+  
+
 
 
 
