@@ -31,8 +31,8 @@ router.patch("/Notif/:id",async(req,res)=>{
 
 router.patch("/msgNotif/:id", async (req, res) => {
     try {
-      const { message } = req.body; // Extract the message from the request body
-      const updateNotif = await Notif.findByIdAndUpdate(req.params.id, { message }, { new: true });
+     
+      const updateNotif = await Notif.findByIdAndUpdate(req.params.id, {$set:req.body} , { new: true });
       res.status(200).json(updateNotif);
     } catch (error) {
       console.log(error);
