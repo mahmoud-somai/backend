@@ -29,6 +29,18 @@ router.patch("/Notif/:id",async(req,res)=>{
     }
 })
 
+router.patch("/msgNotif/:id", async (req, res) => {
+    try {
+      const { message } = req.body;
+      const updateNotif = await Notif.findByIdAndUpdate(req.params.id, { message });
+      res.status(200).json(updateNotif);
+    } catch (error) {
+      console.log(error);
+      res.status(500).json({ error: "Internal Server Error" });
+    }
+  });
+  
+
 router.patch("/Notif", async (req, res) => {
     try {
       // Find all notifications
