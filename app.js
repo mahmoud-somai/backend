@@ -13,11 +13,7 @@ app.use(cors());
 
 dotenv.config()
 
-
 app.use(express.json())
-
-
-
 
 const connect = async()=>{
     await mongoose.connect(process.env.db);
@@ -25,7 +21,6 @@ const connect = async()=>{
 };
 
 
- 
 app.use("/api/user",authRoute); 
 app.use("/api/posts",postRoute) 
 app.use("/api",doctorRoute)
@@ -46,7 +41,7 @@ app.get('/test',(req,res)=>{
 });
 
 app.get('/',(req,res)=>{
-    res.json('Hello ');
+    res.json('Hello  Again');
 });
 
 
