@@ -42,7 +42,7 @@ app.get('/vs',(req,res)=>{
 
 
 app.get('/test',(req,res)=>{
-    res.json('Test');
+    res.json('Test EndPoint');
 });
 
 app.get('/',(req,res)=>{
