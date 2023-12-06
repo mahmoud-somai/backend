@@ -29,16 +29,25 @@ router.patch("/Notif/:id",async(req,res)=>{
     }
 })
 
-router.patch("/msgNotif/:id", async (req, res) => {
+router.patch("/notification/:id", async (req, res) => {
     try {
-     
-      const updateNotif = await Notif.findByIdAndUpdate(req.params.id, {$set:req.body} , { new: true });
-      res.status(200).json(updateNotif);
+        const { id } = req.params;
+        const { message } = req.body; // Assuming the updated message is sent in the body
+
+        const updateNotif = await Notif.findByIdAndUpdate(id, { message }, { new: true });
+
+        if (!updateNotif) {
+            return res.status(404).json({ error: "Notification not found" });
+        }
+
+        return res.status(200).json(updateNotif);
     } catch (error) {
-      console.log(error);
-      res.status(500).send("Error updating notification message");
+        console.error(error);
+        return res.status(500).json({ error: "Server Error" });
     }
-  });
+});
+
+  
   
   
 
