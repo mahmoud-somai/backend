@@ -82,7 +82,7 @@ router.post("/doctor/logindoc",async(req,res)=>{
         token,
         idDoctor: doctor._id, 
         NameDoctor: doctor.firstName+" "+doctor.lastName,
-        speciality:dotor.speciality,
+        speciality:doctor.speciality,
         
         message: "Login successful",
     });
