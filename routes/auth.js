@@ -49,6 +49,7 @@ router.post("/login",async(req,res)=>{
         idUser: user._id, 
         NameUser: user.firstName+" "+user.lastName,
         role: user.role,
+        address: user.address,
         message: "Login successful",
     });
     
