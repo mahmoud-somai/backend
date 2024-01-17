@@ -32,13 +32,13 @@ app.use("/api",notifRoute)
 
 
 app.get('/test',(req,res)=>{
-    res.json(' EP To make a test ');
+    res.json(' Test Endpoint');
 });
 
 
 
 app.get('/',(req,res)=>{
-    res.json('Hello  Mr Anis');
+    res.json('Hello  Mr');
 });
 
 
