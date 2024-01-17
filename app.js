@@ -29,19 +29,16 @@ app.use("/api",appointmentRoute)
 app.use("/api",notifRoute)
 
 
-app.get('/vs',(req,res)=>{
-    res.json('VS EndPoint');
-});
-
-
 
 
 app.get('/test',(req,res)=>{
-    res.json('Test EndPoint');
+    res.json(' EP To make a test ');
 });
 
+
+
 app.get('/',(req,res)=>{
-    res.json('Hello  Mme');
+    res.json('Hello  Mr Anis');
 });
 
 
